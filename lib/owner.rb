@@ -68,15 +68,19 @@ class Owner
     Cat.all.select do |cats|
       cats.mood = "nervous"
       #binding.pry
-      cats.owner
+      cats.owner = nil
   end
     Dog.all.select do |dogs|
       dogs.mood = "nervous"
-    #   dogs.owner = nil
-    #   dogs.all.clear
-      
+      dogs.owner = nil
     end
+  end
 
+  def list_pets
+    dog_count = self.dogs.count
+    cat_count = self.cats.count
+    "I have #{dog_count} dog(s), and #{cat_count} cat(s)."
     
+  end
 
 end
