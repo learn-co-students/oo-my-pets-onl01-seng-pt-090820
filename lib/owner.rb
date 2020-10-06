@@ -70,8 +70,8 @@ class Owner
       #binding.pry
       cats.owner
   end
-    # Dog.all.select do |dogs|
-    #   dogs.mood = "nervous"
+    Dog.all.select do |dogs|
+      dogs.mood = "nervous"
     #   dogs.owner = nil
     #   dogs.all.clear
       
